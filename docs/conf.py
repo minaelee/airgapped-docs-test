@@ -70,7 +70,7 @@ copyright = "%s CC-BY-SA, %s" % (datetime.date.today().year, author)
 # NOTE: The Open Graph Protocol (OGP) enhances page display in a social graph
 #       and is used by social media platforms; see https://ogp.me/
 
-ogp_site_url = "https://canonical-starter-pack.readthedocs-hosted.com/"
+ogp_site_url = "https://canonical-airgapped-docs.readthedocs-hosted.com/"
 
 
 # Preview name of the documentation website
@@ -132,7 +132,7 @@ html_context = {
     #
     # NOTE: If set, links for viewing the documentation source files
     #       and creating GitHub issues are added at the bottom of each page.
-    "github_url": "https://github.com/canonical/sphinx-docs-starter-pack",
+    "github_url": "https://github.com/canonical/airgapped-docs",
     # Docs branch in the repo; used in links for viewing the source files
     #
     # TODO: To customise the branch, uncomment and update as needed.
@@ -177,7 +177,7 @@ html_context = {
 
 # Base URL of RTD hosted project
 
-html_baseurl = 'https://canonical-starter-pack.readthedocs-hosted.com/'
+html_baseurl = 'https://canonical-airgapped-docs.readthedocs-hosted.com/'
 
 # URL scheme. Add language and version scheme elements.
 # When configured with RTD variables, check for RTD environment so manual runs succeed:
@@ -186,7 +186,7 @@ if 'READTHEDOCS_VERSION' in os.environ:
     version = os.environ["READTHEDOCS_VERSION"]
     sitemap_url_scheme = '{version}{link}'
 else:
-    sitemap_url_scheme = 'MANUAL/{link}'
+    sitemap_url_scheme = '{link}'
 
 # Include `lastmod` dates in the sitemap:
 
@@ -361,9 +361,3 @@ if "discourse_prefix" not in html_context and "discourse" in html_context:
 if os.path.exists('./reuse/substitutions.yaml'):
     with open('./reuse/substitutions.yaml', 'r') as fd:
         myst_substitutions = yaml.safe_load(fd.read())
-
-# Add configuration for intersphinx mapping
-
-intersphinx_mapping = {
-    'starter-pack': ('https://canonical-example-product-documentation.readthedocs-hosted.com/en/latest', None)
-}

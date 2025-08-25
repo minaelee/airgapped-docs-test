@@ -5,11 +5,11 @@ myst:
 ---
 
 (airgapped-products)=
-# Air-gapping documentation for specific products
+# Air-gapped documentation for specific products
 
 Find product-specific documentation regarding air-gapped environments below.
 
-If a product is not seen in this list, that only means no air-gapping documentation is yet available for that product. It might still be possible to use it in air-gapped environment.
+If a product is not seen in this list, that only means no air-gapped documentation is yet available for that product. It might still be possible to use it in an air-gapped environment.
 
 (airgapped-products-store)=
 ## Enterprise Store
